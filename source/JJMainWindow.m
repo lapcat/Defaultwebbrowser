@@ -6,15 +6,19 @@ static const CGFloat JJMainWindowMargin = 15.0;
 static CFStringRef WebURLScheme = CFSTR("http");
 static NSWindow* _mainWindow;
 static NSPopUpButton* _popUp;
+static BOOL _needsUpdate;
 
 +(void)popUpAction:(nonnull id)sender {
 	NSString* bundleID = [sender representedObject];
 	OSStatus status = LSSetDefaultHandlerForURLScheme(WebURLScheme, (__bridge CFStringRef _Nonnull)bundleID);
 	if (status != noErr) {
+		[self popUpPopUp];
 		NSAlert* alert = [[NSAlert alloc] init];
 		[alert setMessageText:@"Cannot set default web browser"];
 		[alert setInformativeText:[NSString stringWithFormat:@"LSSetDefaultHandlerForURLScheme returned %i", status]];
 		[alert beginSheetModalForWindow:_mainWindow completionHandler:nil];
+	} else {
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidBecomeMain:) name:NSWindowDidBecomeMainNotification object:_mainWindow];
 	}
 }
 
@@ -24,6 +28,9 @@ static NSPopUpButton* _popUp;
 }
 
 +(void)popUpWillPopUp:(nonnull NSNotification*)notification {
+	_needsUpdate = NO;
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidBecomeMainNotification object:nil];
+	
 	NSPopUpButton* popUp = [notification object];
 	NSMenu* menu = [popUp menu];
 	[menu removeAllItems];
@@ -77,10 +84,14 @@ static NSPopUpButton* _popUp;
 }
 
 +(void)windowDidBecomeMain:(nonnull NSNotification*)notification {
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:[notification name] object:[notification object]];
+	_needsUpdate = YES;
+	
 	// This is necessary because calling LSSetDefaultHandlerForURLScheme
 	// triggers a system dialog with "Use" and "Keep" buttons.
-	dispatch_async(dispatch_get_main_queue(), ^{
-		[self popUpPopUp];
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		if (_needsUpdate)
+			[self popUpPopUp];
 	});
 }
 
@@ -129,6 +140,6 @@ static NSPopUpButton* _popUp;
 	NSNotificationCenter* defaultCenter = [NSNotificationCenter defaultCenter];
 	[defaultCenter addObserver:self selector:@selector(popUpWillPopUp:) name:NSPopUpButtonWillPopUpNotification object:_popUp];
 	[defaultCenter addObserver:self selector:@selector(windowWillClose:) name:NSWindowWillCloseNotification object:_mainWindow];
-	[defaultCenter addObserver:self selector:@selector(windowDidBecomeMain:) name:NSWindowDidBecomeMainNotification object:_mainWindow];
 }
+
 @end
