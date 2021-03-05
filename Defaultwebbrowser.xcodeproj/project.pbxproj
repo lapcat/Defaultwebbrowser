@@ -1,0 +1,227 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		522D02E925F281050040F7B6 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 522D02E525F280F50040F7B6 /* LICENSE.txt */; };
+		522D02F825F281290040F7B6 /* JJMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D02F225F281290040F7B6 /* JJMainWindow.m */; };
+		522D02F925F281290040F7B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D02F325F281290040F7B6 /* main.m */; };
+		522D02FA25F281290040F7B6 /* JJApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D02F425F281290040F7B6 /* JJApplicationDelegate.m */; };
+		522D02FB25F281290040F7B6 /* JJMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D02F525F281290040F7B6 /* JJMainMenu.m */; };
+		522D02FC25F281290040F7B6 /* JJLicenseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 522D02F625F281290040F7B6 /* JJLicenseWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		522D02E325F280F50040F7B6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		522D02E425F280F50040F7B6 /* Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
+		522D02E525F280F50040F7B6 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		522D02E725F280F50040F7B6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		522D02E825F280F50040F7B6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		522D02EB25F281290040F7B6 /* Defaultwebbrowser.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Defaultwebbrowser.entitlements; sourceTree = "<group>"; };
+		522D02EC25F281290040F7B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522D02EE25F281290040F7B6 /* JJMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainWindow.h; sourceTree = "<group>"; };
+		522D02EF25F281290040F7B6 /* JJApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJApplicationDelegate.h; sourceTree = "<group>"; };
+		522D02F025F281290040F7B6 /* JJLicenseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJLicenseWindow.h; sourceTree = "<group>"; };
+		522D02F125F281290040F7B6 /* JJMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJMainMenu.h; sourceTree = "<group>"; };
+		522D02F225F281290040F7B6 /* JJMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainWindow.m; sourceTree = "<group>"; };
+		522D02F325F281290040F7B6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		522D02F425F281290040F7B6 /* JJApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJApplicationDelegate.m; sourceTree = "<group>"; };
+		522D02F525F281290040F7B6 /* JJMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJMainMenu.m; sourceTree = "<group>"; };
+		522D02F625F281290040F7B6 /* JJLicenseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJLicenseWindow.m; sourceTree = "<group>"; };
+		528BBF5B25F27D1300E84D52 /* Default web browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Default web browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528BBF5825F27D1300E84D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		522D02EA25F281290040F7B6 /* nonsource */ = {
+			isa = PBXGroup;
+			children = (
+				522D02EB25F281290040F7B6 /* Defaultwebbrowser.entitlements */,
+				522D02EC25F281290040F7B6 /* Info.plist */,
+			);
+			path = nonsource;
+			sourceTree = SOURCE_ROOT;
+		};
+		522D02ED25F281290040F7B6 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				522D02EF25F281290040F7B6 /* JJApplicationDelegate.h */,
+				522D02F425F281290040F7B6 /* JJApplicationDelegate.m */,
+				522D02F025F281290040F7B6 /* JJLicenseWindow.h */,
+				522D02F625F281290040F7B6 /* JJLicenseWindow.m */,
+				522D02F125F281290040F7B6 /* JJMainMenu.h */,
+				522D02F525F281290040F7B6 /* JJMainMenu.m */,
+				522D02EE25F281290040F7B6 /* JJMainWindow.h */,
+				522D02F225F281290040F7B6 /* JJMainWindow.m */,
+				522D02F325F281290040F7B6 /* main.m */,
+			);
+			path = source;
+			sourceTree = SOURCE_ROOT;
+		};
+		528BBF5225F27D1300E84D52 = {
+			isa = PBXGroup;
+			children = (
+				522D02E725F280F50040F7B6 /* README.md */,
+				522D02E525F280F50040F7B6 /* LICENSE.txt */,
+				522D02E825F280F50040F7B6 /* Debug.xcconfig */,
+				522D02E325F280F50040F7B6 /* Release.xcconfig */,
+				522D02E425F280F50040F7B6 /* Shared.xcconfig */,
+				522D02EA25F281290040F7B6 /* nonsource */,
+				522D02ED25F281290040F7B6 /* source */,
+				528BBF5C25F27D1300E84D52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528BBF5C25F27D1300E84D52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528BBF5B25F27D1300E84D52 /* Default web browser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528BBF5A25F27D1300E84D52 /* Defaultwebbrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528BBF6C25F27D1400E84D52 /* Build configuration list for PBXNativeTarget "Defaultwebbrowser" */;
+			buildPhases = (
+				528BBF5725F27D1300E84D52 /* Sources */,
+				528BBF5825F27D1300E84D52 /* Frameworks */,
+				528BBF5925F27D1300E84D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Defaultwebbrowser;
+			productName = Defaultwebbrowser;
+			productReference = 528BBF5B25F27D1300E84D52 /* Default web browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528BBF5325F27D1300E84D52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+				ORGANIZATIONNAME = "Jeff Johnson";
+				TargetAttributes = {
+					528BBF5A25F27D1300E84D52 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 528BBF5625F27D1300E84D52 /* Build configuration list for PBXProject "Defaultwebbrowser" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528BBF5225F27D1300E84D52;
+			productRefGroup = 528BBF5C25F27D1300E84D52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528BBF5A25F27D1300E84D52 /* Defaultwebbrowser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528BBF5925F27D1300E84D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522D02E925F281050040F7B6 /* LICENSE.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528BBF5725F27D1300E84D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522D02FB25F281290040F7B6 /* JJMainMenu.m in Sources */,
+				522D02FC25F281290040F7B6 /* JJLicenseWindow.m in Sources */,
+				522D02F925F281290040F7B6 /* main.m in Sources */,
+				522D02F825F281290040F7B6 /* JJMainWindow.m in Sources */,
+				522D02FA25F281290040F7B6 /* JJApplicationDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		528BBF6A25F27D1400E84D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522D02E425F280F50040F7B6 /* Shared.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		528BBF6B25F27D1400E84D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522D02E425F280F50040F7B6 /* Shared.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		528BBF6D25F27D1400E84D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522D02E825F280F50040F7B6 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		528BBF6E25F27D1400E84D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 522D02E325F280F50040F7B6 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528BBF5625F27D1300E84D52 /* Build configuration list for PBXProject "Defaultwebbrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528BBF6A25F27D1400E84D52 /* Debug */,
+				528BBF6B25F27D1400E84D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528BBF6C25F27D1400E84D52 /* Build configuration list for PBXNativeTarget "Defaultwebbrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528BBF6D25F27D1400E84D52 /* Debug */,
+				528BBF6E25F27D1400E84D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528BBF5325F27D1300E84D52 /* Project object */;
+}
